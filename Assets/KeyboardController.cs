@@ -9,6 +9,7 @@ public class KeyboardController : MonoBehaviour
     public Dictionary<KeyCode, Transform> keyKeyCodes;
     private KeyCode[] allKeyCodes;
     public Vector3 keyOffset = new Vector3(0f, 0f, 0.09f);
+    public TerrainUpdater terrainUpdater;
 
     void Start()
     {
@@ -55,6 +56,8 @@ public class KeyboardController : MonoBehaviour
     private Transform tmpKey;
     void Update()
     {
+        bool keyHit = false;
+
         for (int i=0; i < allKeyCodes.Length; i++)
         {
             if (Input.GetKeyDown(allKeyCodes[i]))
@@ -62,6 +65,7 @@ public class KeyboardController : MonoBehaviour
                 if (keyKeyCodes.TryGetValue(allKeyCodes[i], out tmpKey))
                 {
                     tmpKey.localPosition = keyStartingLocalPositions[tmpKey] - keyOffset;
+                    keyHit = true;
                 }
             }
             if (Input.GetKeyUp(allKeyCodes[i]))
@@ -69,9 +73,12 @@ public class KeyboardController : MonoBehaviour
                 if (keyKeyCodes.TryGetValue(allKeyCodes[i], out tmpKey))
                 {
                     tmpKey.localPosition = keyStartingLocalPositions[tmpKey];
+                    keyHit = true;
                 }
             }
         }
+
+        if (keyHit){ terrainUpdater.UpdateHeightMap(); }
     }
 
     KeyCode FetchKey()
