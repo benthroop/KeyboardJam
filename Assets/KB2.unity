@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.015
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0.3348627, b: 1, a: 1}
-  m_AmbientEquatorColor: {r: 0.05517978, g: 0.24848698, b: 0.3773585, a: 1}
-  m_AmbientGroundColor: {r: 0.65122986, g: 0.8679245, b: 0.10234957, a: 1}
+  m_AmbientSkyColor: {r: 0.36912602, g: 0.5762728, b: 0.990566, a: 1}
+  m_AmbientEquatorColor: {r: 0.4528302, g: 0.30667734, b: 0.1986472, a: 1}
+  m_AmbientGroundColor: {r: 0.5788651, g: 0.8666667, b: 0.10196078, a: 1}
   m_AmbientIntensity: 2.05
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -1746,7 +1746,7 @@ Terrain:
   m_TreeBillboardDistance: 426
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 144
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5.5
   m_SplatMapDistance: 1000
@@ -1754,7 +1754,7 @@ Terrain:
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
   m_DrawInstanced: 1
-  m_DrawTreesAndFoliage: 0
+  m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   m_BakeLightProbesForTrees: 1
